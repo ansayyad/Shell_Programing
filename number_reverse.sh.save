@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#This program to reverse the input number.
+
+echo "Number of arguments: $#"
+
+
+if [ "$#" -eq 1 ]
+then
+num="$1"
+rev=0
+sd=0
+
+while [ "$num" -gt 0 ]
+do
+  sd=`expr $num % 10`
+  rev=`expr $rev \* 10 + $sd`
+  num=`expr $num / 10`
+done
+echo "reverse number is :$rev"
+
+
+fi
+
+
